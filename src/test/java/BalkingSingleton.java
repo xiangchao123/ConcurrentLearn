@@ -4,7 +4,7 @@
  了，直接结束返回,
  缺点：每个线程都要去获得锁，进入monitor，即使已经创建好了单例
  */
-public class BalkingSingleton {
+public final class BalkingSingleton {
     private BalkingSingleton() {
     }
     private static BalkingSingleton INSTANCE = null;
@@ -17,3 +17,4 @@ public class BalkingSingleton {
         return INSTANCE;
     }
 }
+
